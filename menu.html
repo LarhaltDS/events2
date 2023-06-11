@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/menu.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script>
+    function setActiveMenuItem() {
+      var currentUrl = window.location.href;
+      var menuItems = document.querySelectorAll(".sidebar a");
+
+      for (var i = 0; i < menuItems.length; i++) {
+        var menuItemUrl = menuItems[i].getAttribute("href");
+        if (currentUrl.indexOf(menuItemUrl) !== -1) {
+          menuItems[i].classList.add("active");
+        } else {
+          menuItems[i].classList.remove("active");
+        }
+      }
+    }
+    window.onload = setActiveMenuItem;
+  </script>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <img src="img/logo.png" alt="Logo" />
+      <span class="hotel-name">Hotel Principe</span>
+      <span class="sub-text">Planning sale conferenze</span>
+    </div>
+    <a href="show_event_calendar.php"><i class="fa fa-calendar"></i>CALENDARIO</a>
+    <a href="show_client_events.php"><i class="fa fa-user"></i>CLIENTI</a>
+    <a href="new_event.php"><i class="fa fa-plus"></i>NUOVO EVENTO</a>
+  </div>
+  <!-- Contenuto della pagina -->
+</body>
+</html>

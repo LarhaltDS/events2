@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stampa evento</title>
+    <style>
+      /* regole CSS per la stampa */
+      table {
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Nome evento</th>
+        <th>Data</th>
+        <th>Ora inizio</th>
+        <th>Ora fine</th>
+        <th>Luogo</th>
+        <th>Descrizione</th>
+        <th>Partecipanti</th>
+      </tr>
+      <!-- codice PHP per inserire i dati del database -->
+      <?php
+        include 'database.php';
+        $sql = "SELECT * FROM events";
+        $result = $conn->query($sql);
+        while($row = $result->fetch_assoc()) {
+          echo "<tr>";
+          echo "<td>" . $row["event_name"] . "</td>";
+          echo "<td>" . strftime("%a %d %b %Y", strtotime($row["event_date"])) . "</td>";
+          echo "<td>" . date("H:i", strtotime($row["event_time_begin"])) . "</td>";
+          echo "<td>" . date("H:i", strtotime($row["event_time_end"])) . "</td>";
+          echo "<td>" . $row["event_location"] . "</td>";
+          echo "<td>" . $row["event_description"] . "</td>";
+          echo "<td>" . $row["event_participants"] . "</td>";
+          echo "</tr>";
+        }
+      ?>
+    </table>
+  </body>
+</html>

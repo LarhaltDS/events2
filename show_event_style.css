@@ -1,0 +1,156 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  margin: 0;
+  padding: 0;
+  table-layout: fixed;
+  margin-left:15%;
+  margin-right:15%;
+}
+
+th, td {
+  text-align: center;
+  padding: 16px;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+th {
+  background-color: #2196F3;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.fa-pencil-alt {
+  cursor: pointer;
+  font-size: 20px;
+  color: #2196F3;
+}
+
+
+  /* Nascondi gli header della colonna */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  td {
+    /* Imposta la posizione relativa */
+    position: relative;
+
+    /* Imposta il padding sinistro in base al valore della width dell'header della colonna */
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Imposta la posizione assoluta */
+    position: absolute;
+
+    /* Imposta il contenuto del pseudo-elemento con il valore dell'header della colonna */
+    content: attr(data-header);
+
+    /* Imposta la posizione relativa al contenitore */
+    left: 6px;
+    top: 6px;
+
+    /* Imposta lo stile del testo */
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+/* Stile per il selettore a tendina */
+.select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: #f1f1f1;
+}
+
+.select select:focus {
+  background-color: #ddd;
+}
+
+.select:after {
+  position: absolute;
+  content: '\25BC';
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  font-size: 30px;
+  pointer-events: none;
+}
+
+select {
+  padding: 0.5em;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  border: none;
+  border-radius: 0.25em;
+  background-color: #f5f5f5;
+  width: 100%;
+  max-width: 20em;
+  margin-bottom: 1em;
+}
+
+/* Stili per il menu a tendina quando si preme */
+select:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(81, 203, 238, 1);
+}
+
+/* Stili per le opzioni del menu a tendina */
+select option {
+  font-size: 1em;
+  background-color: #f5f5f5;
+  color: #555;
+}
+
+/* Stili per l'input submit */
+input[type=submit] {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 20em;
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+/* Stili per il form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+

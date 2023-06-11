@@ -1,0 +1,90 @@
+
+    body {
+      margin: 0;
+      display: flex;
+      min-height: 100vh;
+      background-color: #fff;
+      font-family: Lato;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 200px;
+      background-color: #232e3f;
+      font-size: 18px;
+    }
+    
+    .sidebar a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .sidebar a {
+      display: block;
+      text-decoration: none;
+      color: #a7b5ce;
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 6px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    	
+    .sidebar a.active {
+      color: #fff;
+    }
+  
+    .sidebar a.active::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      right: -12px;
+      bottom: -5px;
+      background-color: #e91f63;
+      z-index: -1;
+	  padding: 13px;
+    }
+  
+    .sidebar a i {
+      margin-right: 7px;
+    }
+  
+    .sidebar-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+  
+    .sidebar-header img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+  
+    .sidebar-header .hotel-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+  
+    .sidebar-header .sub-text {
+      font-size: 12px;
+      color: #a7b5ce;
+      display: block;
+      margin-top: 5px;
+    }
+  
+    .sidebar-footer {
+      padding: 20px;
+      border-top: 1px solid #a7b5ce;
+      font-size: 12px;
+      color: #a7b5ce;
+    }

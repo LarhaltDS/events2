@@ -1,0 +1,92 @@
+
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #calendar {
+    max-width: 700px;
+  }
+
+  .content {
+    flex: 1;
+    margin-left: 20px;
+  }
+
+  .occupied-rooms-container {
+    width: 200px;
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid #000;
+    margin-top: 10px;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .sidebar {
+    flex-shrink: 0;
+    width: 210px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .popover {
+    background-color: rgba(0, 128, 0, 0.8) !important;
+  }
+
+  .popover-header {
+    background-color: rgba(0, 128, 0, 0.8) !important;
+    color: #fff;
+    border-bottom: none;
+  }
+
+  .popover-body {
+    color: #fff;
+  }
+
+
+.bs-popover-auto[data-popper-placement^=top]>.popover-arrow:after, .bs-popover-top>.popover-arrow:after {
+    border-top-color: rgba(0, 128, 0, 0.5) !important;
+}
+  .fc-event {
+    background-color: #3a87ad;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .fc-day-grid-event {
+    margin: 5px;
+  }
+
+  .fc-content {
+    padding: 10px auto;
+  }
+
+  .occupied-rooms-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .fc-sat,
+  .fc-sun {
+    background-color: #ed9d9d;
+  }
+
+  .occupied-rooms-container li {
+    margin-bottom: 5px;
+  }
+  
